@@ -17,7 +17,6 @@
     &__list-link {
         color: $title-color;
         @extend %quicksand-400;
-        font-size: 20px;
         text-transform: uppercase;
         transition: all .2s;
         &:hover {
@@ -43,6 +42,7 @@
         right: -10px;
         top: -7px;
         font-size: 12px;
+        line-height: 12px;
         padding: 3px 5px;
         border-radius: 50%;
         background-color: $accent-color;

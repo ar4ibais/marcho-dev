@@ -1,14 +1,33 @@
 @import './vars';
 
+html,
+body {
+    height: 100%; 
+}
+
 body {
     color: $default-color;
     font-size: 16px;
+    line-height: 26px;
     @extend %quicksand-500;
 }
 
+.site-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main {
+    flex: 1 0 auto;
+}
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+footer {
+    flex: 0 0 auto;
 }
