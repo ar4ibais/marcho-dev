@@ -1,0 +1,124 @@
+.categories-info {
+    padding: 100px 0;
+    background-image: url(../../img/decor/categories-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -40px;
+        left: -45px;
+        width: 120px;
+        height: 120px;
+        background-image: url(../../img/decor/info-before-bg.svg);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -24px;
+        right: -24px;
+        width: 65px;
+        height: 52px;
+        background-image: url(../../img/decor/info-after-bg.svg);
+    }
+
+    &__item {
+        padding: 60px 40px;
+        box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+        max-width: 370px;
+        z-index: 2;
+        background-color: #fff;
+    }
+
+    &__item-title {
+        color: $title-color;
+        margin-top: 35px;
+        margin-bottom: 10px;
+        font-size: 22px;
+        @extend %roboto-400;
+    }
+}
+
+.categories {
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 25px;
+        height: 640px;
+    }
+
+    &__item {
+        padding: 40px 40px 0;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    &__item:first-child {
+        grid-row: span 2;
+        background-image: url(../../img/categories/1.jpg);
+
+        .categories__item-subtitle {
+            color: #9459e8;
+        }
+    }
+
+    &__item:nth-child(2) {
+        grid-column: span 2;
+        background-image: url(../../img/categories/2.jpg);
+
+        .categories__item-subtitle {
+            color: $accent-color;
+        }
+    }
+
+    &__item:nth-child(3) {
+        background-image: url(../../img/categories/3.jpg);
+
+        .categories__item-subtitle {
+            color: #ffb534;
+        }
+    }
+
+    &__item:last-child {
+        background-image: url(../../img/categories/4.jpg);
+
+        .categories__item-subtitle {
+            color: #40c6fe;
+        }
+    }
+
+    &__item-subtitle {
+        @extend %quicksand-500;
+    }
+
+    &__item-title {
+        color: $title-color;
+        font-size: 22px;
+        @extend %roboto-500;
+        margin: 10px 0;
+    }
+
+    &__item-link {
+        @extend %roboto-400;
+        color: $title-color;
+        padding-bottom: 2px;
+        border-bottom: 1px solid transparent;
+        transition: all .2s;
+
+        &:hover {
+            color: $accent-color;
+            border-bottom: 1px solid $accent-color;
+        }
+    }
+}

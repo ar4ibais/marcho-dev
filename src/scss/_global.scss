@@ -31,3 +31,18 @@ body {
 footer {
     flex: 0 0 auto;
 }
+
+.title {
+    @extend %roboto-700;
+    font-size: 48px;
+    margin-bottom: 25px;
+    color: $title-color;
+    text-align: center;
+}
+
+.text {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 525px;
+    margin-bottom: 50px;
+}
