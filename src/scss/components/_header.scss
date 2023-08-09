@@ -11,32 +11,41 @@
     &__list {
         display: flex;
     }
-    &__list-item + .menu__list-item {
+
+    &__list-item+.menu__list-item {
         margin-left: 35px;
     }
+
     &__list-link {
         color: $title-color;
-        @extend %quicksand-400;
+        @extend %roboto-400;
         text-transform: uppercase;
         transition: all .2s;
+        padding: 0 2px 1px;
+
         &:hover {
             color: $accent-color;
         }
     }
+
     &__list-link--active {
         color: $accent-color;
         border-bottom: 1px solid $accent-color;
+        @extend %roboto-700;
     }
 }
 
 .user-nav {
     display: flex;
+
     &__link {
         position: relative;
     }
-    &__link + .user-nav__link {
+
+    &__link+.user-nav__link {
         margin-left: 25px;
     }
+
     &__num {
         position: absolute;
         right: -10px;

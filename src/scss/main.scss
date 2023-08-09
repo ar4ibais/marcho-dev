@@ -3,8 +3,10 @@
 @import './vars';
 @import './reset';
 @import './media';
+@import './libs';
 // подключения компонентов страницы
 @import "./components/header";
 @import "./components/footer";
+@import "./components/top-slider";
 
 // Основыные стили 

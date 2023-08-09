@@ -84,13 +84,8 @@
     }
     &__form-btn {
         font-size: 16px;
-        color: #fff;
-        border: none;
-        background-color: $accent-color;
         padding: 15px 25px;
-        text-transform: uppercase;
-        box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
-        cursor: pointer;
+        @extend %accent-btn;
     }
 }
 
