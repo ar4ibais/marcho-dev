@@ -1,9 +1,9 @@
 import { tns } from "tiny-slider";
 
-const topSlider = () => {
+const topSlider = (sliderBlock, itemsNum) => {
     const slider = tns({
-        container: '.top-slider__inner',
-        items: 1,
+        container: sliderBlock,
+        items: itemsNum,
         autoplay: true,
         autoplayButtonOutput: false,
         controls: false,
