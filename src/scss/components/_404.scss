@@ -1,0 +1,22 @@
+.page-404 {
+    margin: 100px 0 115px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        @extend %roboto-700;
+        font-size: 48px;
+        color: #28384f;
+        margin-bottom: 30px;
+    }
+    &__text {
+        max-width: 460px;
+        margin-bottom: 50px;
+    }
+    &__btn {
+        @extend %accent-btn;
+        padding: 15px 35px;
+    }
+}

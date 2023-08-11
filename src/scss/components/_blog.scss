@@ -1,0 +1,115 @@
+.blog {
+    margin-bottom: 160px;
+    
+    &__inner {
+        position: relative;
+    
+        &::before {
+            content: '';
+            position: absolute;
+            width: 105px;
+            height: 105px;
+            background-image: url(../../img/decor/blog-before.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            top: 50%;
+            left: -175px;
+            transform: translateY(-50%);
+        }
+    
+        &::after {
+            content: '';
+            position: absolute;
+            width: 105px;
+            height: 105px;
+            background-image: url(../../img/decor/blog-after.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            bottom: -100px;
+            right: -190px;
+        }
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        border: 1px solid #e8e8e8;
+        width: 370px;
+        transition: all .3s;
+        position: relative;
+
+        &:hover {
+            border-color: transparent;
+            box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+        }
+
+        &:last-child {
+            &::after {
+                content: '';
+                position: absolute;
+                width: 126px;
+                height: 53px;
+                background-image: url(../../img/decor/blog-item-after.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                top: -25px;
+                right: -25px;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__item-content {
+        padding: 25px 30px;
+    }
+
+    &__item-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        div {
+            padding-left: 35px;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                top: 0;
+                left: 0;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+
+    &__item-author {
+        &::before {
+            background-image: url(../../img/icons/user.svg);
+        }
+    }
+
+    &__item-date {
+        &::before {
+            background-image: url(../../img/icons/clock.svg);
+        }
+    }
+
+    &__item-title {
+        @extend %roboto-400;
+        color: $title-color;
+        font-size: 22px;
+        line-height: 32px;
+        margin-bottom: 15px;
+    }
+
+    &__item-link {
+        transition: all .2s;
+
+        &:hover {
+            color: $accent-color;
+        }
+    }
+}

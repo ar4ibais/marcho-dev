@@ -1,0 +1,64 @@
+.promo {
+    background-image: url(../../img/promo-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 115px;
+    &__inner {
+        padding: 160px 0;
+       display: flex;
+       justify-content: flex-end;
+    }
+    &__content {
+        text-align: center;
+        max-width: 580px;
+    }
+    &__subtitle {
+        font-size: 22px;
+        color: $accent-color;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &__title {
+        margin-bottom: 50px;
+    }
+    &__timer {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        div + div {
+            margin-left: 20px;
+        }
+    }
+    &__timer-block {
+        width: 120px;
+        height: 120px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            display: block;
+            @extend %roboto-700;
+            color: $title-color;
+            font-size: 48px;
+            line-height: 50px;
+        }
+    }
+    &__link {
+        @extend %roboto-400;
+        color: $title-color;
+        padding: 15px 30px;
+        border: 1px solid $accent-color;
+        letter-spacing: 3px;
+    }
+}
+
+.partners {
+    margin-bottom: 115px;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+}

@@ -3,8 +3,18 @@
 @import './vars';
 @import './reset';
 @import './media';
+@import './libs';
 // подключения компонентов страницы
 @import "./components/header";
-@import "./components/hero";
+@import "./components/footer";
+@import "./components/top-slider";
+@import "./components/categories";
+@import "./components/video-fashion";
+@import "./components/product";
+@import "./components/promo";
+@import "./components/blog";
+@import "./components/top";
+@import "./components/modal";
+@import "./components/404";
 
 // Основыные стили 
