@@ -161,3 +161,44 @@
         border: 1px solid $default-color;
     }
 }
+
+.filter-category {
+    &__label + label {
+        display: block;
+        margin-top: 15px;
+    }
+    &__input {
+        @extend %checkbox-hide;
+        &:checked + .filter-category__checkbox {
+            color: #fff;
+            background-color: $accent-color;
+        }
+    }
+    &__checkbox {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        background-color: $bg;
+        color: $title-color;
+    }
+}
+
+.filter-popular {
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px 15px;
+    }
+    &__input {
+        @extend %checkbox-hide;
+        &:checked + .filter-popular__text {
+            border-color: transparent;
+            background-color: $accent-color;
+            color: #fff;
+        }
+    }
+    &__text {
+        padding: 10px 20px;
+        border: 1px solid $default-color;
+    }
+}
