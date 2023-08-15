@@ -3,6 +3,8 @@ import video from "./modules/video";
 import starRating from "./modules/stars";
 import timer from "./modules/timer";
 import rangeSlider from "./modules/range-slider";
+import selects from "./modules/selects";
+import tabs from "./modules/tabs";
 
 window.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.top-slider__inner')) {
@@ -19,4 +21,6 @@ window.addEventListener('DOMContentLoaded', () => {
     starRating('.product-item--5 .stars i', 'active');
     starRating('.product-item--6 .stars i', 'active');
     rangeSlider();
+    selects('.js-choice');
+    tabs('.shop-content__filter-btn', '.shop-content__inner', '.shop-content__filter-buttons', 'shop-content__filter-btn--active')
 });
