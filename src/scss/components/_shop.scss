@@ -270,10 +270,15 @@
         transform: rotate(-225deg);
         top: 23px;
     }
+    &__inner {
+        margin-bottom: 35px;
+    }
     .inner-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 50px 30px;
+        border-bottom: 1px solid #ececec;
+        padding-bottom: 35px;
     }
     .inner-list {
         display: block;
