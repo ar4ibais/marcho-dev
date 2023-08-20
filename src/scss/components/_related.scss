@@ -1,0 +1,16 @@
+.related {
+    margin-bottom: 100px;
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+    .product-item__img-box {
+        width: 270px;
+        height: 270px;
+    }
+    .product-item__title {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+}

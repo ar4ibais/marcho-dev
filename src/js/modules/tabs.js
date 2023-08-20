@@ -5,9 +5,6 @@ const tabs = (tabsSelector, tabsContentSelector, tabsParentSelector, activeClass
         tabsContent = document.querySelectorAll(tabsContentSelector),
         tabsParent = document.querySelector(tabsParentSelector);
 
-    console.log(tabs);
-    console.log(tabsContent);
-    console.log(tabsParent);
 
     function hideTabContent() {
         tabsContent.forEach(item => {
@@ -34,14 +31,14 @@ const tabs = (tabsSelector, tabsContentSelector, tabsParentSelector, activeClass
         
         if (target.classList.contains(tabsSelector.slice(1)) || target.tagName == 'path' || target.tagName == 'svg') {
             tabs.forEach((item, i) => {
-                if (target.parentNode.parentNode == item || target.parentNode == item) {
+                if (target.parentNode.parentNode == item || target.parentNode == item || target == item) {
                     hideTabContent();
                     showTabContent(i);
                 }
             });
         } else {
             console.log('fuck');
-        }
+        }   
     });
 };
 
