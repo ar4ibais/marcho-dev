@@ -8,6 +8,12 @@ import tabs from "./modules/tabs";
 import prodRate from "./modules/product-rating";
 import thumbSlider from "./modules/thumbs-slider";
 import stepper from "./modules/stepper";
+import blogSlider from "./modules/blog-slider";
+
+
+
+
+
 
 window.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.top-slider__inner')) {
@@ -33,8 +39,12 @@ window.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.product-tabs__item')) {
         tabs('.product-tabs__item', '.product-tabs__content', '.product-tabs__inner', 'product-tabs__item--active');
     }
-    prodRate();
-    thumbSlider();
+    if (document.querySelector('.product-add__rating')) {
+        prodRate();
+    }
+    if (document.querySelector('.product-slide__big')) {
+        thumbSlider();
+    }
 
     if (document.getElementById('increment')) {
         document.getElementById('increment').addEventListener('click', e => {
@@ -45,5 +55,9 @@ window.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             stepper(document.getElementById('decrement'));
         });
+    }
+
+    if (document.querySelector('.blog-page__item--slider')) {
+        blogSlider('.blog-page__item--slider', 1)
     }
 });

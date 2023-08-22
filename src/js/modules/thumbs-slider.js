@@ -1,6 +1,5 @@
 const thumbSlider = () => {
     const thumbs = document.querySelectorAll('.product-slide__thumbs img'),
-        thumbsContainer = document.querySelector('.product-slide__thumbs'),
         bigSlide = document.querySelector('.product-slide__big');
 
     thumbs[0].classList.add('active');
