@@ -1,0 +1,120 @@
+.contacts {
+    margin: 110px 0;
+
+    &__map iframe {
+        width: 100%;
+        height: 450px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 110px;
+    }
+
+    &__content {
+        max-width: 365px;
+    }
+
+    &__title {
+        color: $title-color;
+        @extend %roboto-700;
+        font-size: 47px;
+        margin-bottom: 30px;
+        line-height: 58px;
+    }
+
+    &__text {
+        margin-bottom: 50px;
+    }
+
+    &__techs {
+        max-width: 300px;
+        color: $title-color;
+
+        div {
+            position: relative;
+            padding-left: 80px;
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 60px;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0px 5px 20px 0px rgba(146, 146, 146, 0.3);
+                top: -5px;
+                left: 0;
+                background-repeat: no-repeat;
+                object-fit: cover;
+                background-position: center center;
+            }
+        }
+
+        div+div {
+            margin-top: 40px;
+        }
+    }
+
+    &__phones {
+        a {
+            display: inline-block;
+        }
+
+        &::before {
+            background-image: url(../../img/icons/phone-accent.svg);
+        }
+    }
+
+    &__adress {
+        &::before {
+            background-image: url(../../img/icons/location-accent.svg);
+        }
+    }
+
+    &__emails {
+        &::before {
+            background-image: url(../../img/icons/email-accent.svg);
+        }
+    }
+
+    &__form {
+        padding: 60px 40px;
+        box-shadow: 0px 10px 40px 0px rgba(172, 172, 172, 0.3);
+        max-width: 770px;
+    }
+    &__form-title {
+        color: $title-color;
+        @extend %roboto-700;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    &__form-inputs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        gap: 30px;
+    }
+    &__form-input {
+        border: none;
+        background-color: #f6f6f6;
+        padding: 12px 20px;
+        width: 100%;
+        min-width: 330px;
+    }
+    &__form-textarea {
+        width: 100%;
+        margin: 30px 0;
+        border: none;
+        background-color: #f6f6f6;
+        padding: 12px 20px;
+        resize: none;
+        height: 200px;
+    }
+    &__form-btn {
+        @extend %accent-btn;
+        padding: 12px 20px;
+    }
+}
