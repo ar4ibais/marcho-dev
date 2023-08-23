@@ -23,6 +23,7 @@
         margin-bottom: 60px;
         position: relative;
         transition: all .2s;
+        display: block;
 
         &:hover {
             box-shadow: 0px 20px 60px 0px rgba(202, 202, 202, 0.35);
@@ -80,6 +81,7 @@
         margin-bottom: 25px;
         font-size: 22px;
         transition: all .2s;
+        display: inline-block;
     }
 
     .blog-box {
