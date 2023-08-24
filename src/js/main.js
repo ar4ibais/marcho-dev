@@ -60,4 +60,10 @@ window.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.blog-page__item--slider')) {
         blogSlider('.blog-page__item--slider', 1)
     }
+
+    // Adaptive
+
+    document.querySelector('.menu__btn').addEventListener('click', () => {
+        document.querySelector('.menu__list').classList.toggle('menu__list--active');
+    });
 });
