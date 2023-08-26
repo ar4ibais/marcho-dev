@@ -158,4 +158,12 @@ footer {
         font-size: 32px;
         line-height: 40px;
     }
+    .pagination {
+        &__list {
+            margin: 0 20px;
+            li + li {
+                margin-left: 15px;
+            }
+        }
+    }
 }
