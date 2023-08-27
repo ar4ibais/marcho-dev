@@ -3,7 +3,24 @@
 @import './vars';
 @import './reset';
 @import './media';
+@import './libs';
 // подключения компонентов страницы
 @import "./components/header";
+@import "./components/footer";
+@import "./components/top-slider";
+@import "./components/categories";
+@import "./components/video-fashion";
+@import "./components/product";
+@import "./components/promo";
+@import "./components/blog";
+@import "./components/top";
+@import "./components/modal";
+@import "./components/404";
+@import "./components/shop";
+@import "./components/product-page";
+@import "./components/related";
+@import "./components/blog-page";
+@import "./components/blog-one-page";
+@import "./components/contacts";
 
 // Основыные стили 

@@ -1,0 +1,131 @@
+.top-slider {
+    background-image: url(../../img/slider/bg.jpg);
+    position: relative;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content {
+        padding-top: 150px;
+        padding-left: 15px;
+    }
+
+    &__title {
+        @extend %roboto-700;
+        font-size: 58px;
+        line-height: 68px;
+        color: $title-color;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        max-width: 470px;
+        margin-bottom: 50px;
+    }
+
+    &__link {
+        @extend %accent-btn;
+        padding: 15px 30px;
+        font-size: 16px;
+
+    }
+
+    .tns-nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 50px;
+        z-index: 2;
+    }
+
+    .tns-nav button {
+        padding: 0;
+        margin: 0 10px;
+        border: none;
+        background-color: $default-color;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+    }
+
+    .tns-nav button.tns-nav-active {
+        width: 27px;
+        height: 27px;
+        margin: 0;
+        background-color: transparent;
+        transform: translateY(-3px);
+        border: 1px solid $accent-color;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            border-radius: 50%;
+            width: 5px;
+            height: 5px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $accent-color;
+        }
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    .top-slider {
+        &__content {
+            padding-top: 40px;
+        }
+
+        &__img {
+            object-fit: contain;
+            width: 40%;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .top-slider {
+        padding: 50px 0;
+
+        &__content {
+            padding-bottom: 50px;
+        }
+
+        &__img {
+            display: none;
+        }
+    }
+
+    .top-slider .tns-nav {
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 620px) {
+    .top-slider {
+        padding: 45px 0 30px;
+
+        &__title {
+            font-size: 45px;
+            line-height: 52px;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .top-slider {
+        padding: 20px 0;
+    }
+    .top-slider .tns-nav {
+        bottom: 10px;
+    }
+}

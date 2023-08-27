@@ -16,8 +16,10 @@
   "devDependencies": {
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
+    "@fancyapps/ui": "^5.0.22",
     "babel-loader": "^8.2.3",
     "browser-sync": "^2.26.14",
+    "choices.js": "^10.2.0",
     "del": "^6.0.0",
     "editorconfig-checker": "^4.0.1",
     "gulp": "^4.0.2",
@@ -36,10 +38,15 @@
     "gulp-rev-rewrite": "^4.0.0",
     "gulp-sass": "^5.0.0",
     "node-w3c-validator": "^2.0.1",
+    "nouislider": "^15.7.1",
     "postcss": "^8.4.5",
     "postcss-scss": "^4.0.2",
     "sass": "^1.45.1",
     "webpack": "^5.65.0",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "tiny-slider": "^2.9.4",
+    "wnumb": "^1.2.0"
   }
 }

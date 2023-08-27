@@ -1,0 +1,265 @@
+.blog-one {
+    &__post {
+        margin-bottom: 25px;
+    }
+
+    &__content-box {
+        padding: 30px;
+        border: 1px solid #ececec;
+        border-top: none;
+    }
+
+    &__params {
+        margin-bottom: 30px;
+
+        span {
+            padding-left: 25px;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-repeat: no-repeat;
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    &__date {
+        &::before {
+            background-image: url(../../img/icons/calendar-accent.svg);
+        }
+    }
+
+    &__comments {
+        margin: 0 35px;
+
+        &::before {
+            background-image: url(../../img/icons/comments-accent.svg);
+        }
+    }
+
+    &__author {
+        &::before {
+            background-image: url(../../img/icons/user-accent.svg);
+        }
+    }
+
+    &__title {
+        font-size: 22px;
+        color: $title-color;
+        @extend %roboto-700;
+        margin-bottom: 25px;
+    }
+
+    &__blockquote {
+        margin: 30px 0;
+        padding: 40px;
+        background-color: #f6f6f6;
+        border-left: 3px solid $accent-color;
+        font-size: 18px;
+        color: $title-color;
+        @extend %roboto-700;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        img {
+            margin-right: 30px;
+        }
+    }
+
+    &__techs {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 25px;
+    }
+
+    &__techs-tags {
+        text-transform: uppercase;
+        color: $title-color;
+
+        span {
+            text-transform: capitalize;
+            color: $default-color;
+        }
+    }
+
+    &__techs-socials {
+        text-transform: uppercase;
+        color: $title-color;
+
+        a {
+            margin-left: 10px;
+
+            path {
+                fill: $default-color;
+                transition: all .2s;
+
+                &:hover {
+                    fill: $accent-color;
+                }
+            }
+        }
+    }
+
+    &__employee,
+    &__reviews {
+        padding: 40px 0;
+        margin-bottom: 35px;
+        border-bottom: 1px solid #ececec;
+    }
+
+    &__employee {
+        display: flex;
+
+        img {
+            margin-right: 30px;
+        }
+    }
+
+    &__employee-content {
+        padding: 15px 0;
+    }
+
+    &__employee-name {
+        color: $title-color;
+        text-transform: uppercase;
+        font-size: 22px;
+        @extend %roboto-500;
+        margin-bottom: 20px;
+    }
+
+    &__reviews-title,
+    &__form-title {
+        font-size: 24px;
+        color: $title-color;
+        @extend %roboto-700;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+
+    &__form-inputs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__form-input {
+        padding: 15px 20px;
+        width: 375px;
+        border: 1px solid #ececec;
+    }
+
+    &__form-textarea {
+        width: 100%;
+        resize: none;
+        border: 1px solid #ececec;
+        padding: 15px 20px;
+        height: 200px;
+        margin-bottom: 30px;
+    }
+
+    &__form-btn {
+        @extend %accent-btn;
+        padding: 12px 25px;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 992px) {
+    .blog-one {
+        &__post-image {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-one {
+        &__inner img {
+            height: fit-content;
+        }
+
+        &__content-box {
+            padding: 20px;
+        }
+
+        &__form-inputs {
+            display: block;
+            margin-bottom: 0;
+        }
+
+        &__form-input {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .blog-one {
+        margin: 70px 0;
+
+        &__inner {
+            display: block;
+
+            img {
+                width: 100%;
+                height: 300px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .blog-one {
+        &__params span {
+            display: block;
+            margin-bottom: 10px;
+        }
+        &__blockquote {
+            padding: 20px;
+        }
+        &__comments {
+            margin: 0 0 10px;
+        }
+        &__employee {
+            display: block;
+            padding: 25px 0;
+            margin-bottom: 25px;
+            img {
+                margin-right: 0;
+                width: 100%;
+                height: 250px;
+            }
+        }
+    }
+    .product-review {
+        &__content {
+            margin-left: 15px;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .blog-one {
+        &__techs {
+            display: block;
+        }
+        &__techs-tags {
+            margin-bottom: 10px;
+        }
+    }
+}
