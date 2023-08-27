@@ -14,3 +14,29 @@
         margin-bottom: 5px;
     }
 }
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    .related {
+        &__items {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+        }
+        .product-item__img-box {
+            width: auto;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .related {
+        &__items {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

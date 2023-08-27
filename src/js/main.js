@@ -66,4 +66,15 @@ window.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.menu__btn').addEventListener('click', () => {
         document.querySelector('.menu__list').classList.toggle('menu__list--active');
     });
+
+    if (document.querySelector('.shop__filters-btn')) {
+        document.querySelector('.shop__filters-btn').addEventListener('click', () => {
+            document.querySelector('.shop__filters').classList.toggle('active');
+            if (document.querySelector('.shop__filters').classList.contains('active')) {
+                document.documentElement.style.overflow = 'hidden';
+            } else {
+                document.documentElement.style.overflow = '';
+            }
+        });
+    }
 });

@@ -85,18 +85,21 @@
         box-shadow: 0px 10px 40px 0px rgba(172, 172, 172, 0.3);
         max-width: 770px;
     }
+
     &__form-title {
         color: $title-color;
         @extend %roboto-700;
         font-size: 22px;
         margin-bottom: 20px;
     }
+
     &__form-inputs {
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
         gap: 30px;
     }
+
     &__form-input {
         border: none;
         background-color: #f6f6f6;
@@ -104,6 +107,7 @@
         width: 100%;
         min-width: 330px;
     }
+
     &__form-textarea {
         width: 100%;
         margin: 30px 0;
@@ -113,8 +117,63 @@
         resize: none;
         height: 200px;
     }
+
     &__form-btn {
         @extend %accent-btn;
         padding: 12px 20px;
+    }
+}
+
+
+
+
+
+@media (max-width: 1100px) {
+    .contacts {
+        &__inner {
+            display: block;
+            margin-top: 70px;
+        }
+
+        &__content {
+            margin-bottom: 30px;
+        }
+
+        &__content,
+        &__form {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 830px) {
+    .contacts {
+        &__form {
+            padding: 40px;
+        }
+
+        &__form-inputs {
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .contacts {
+        margin: 70px 0;
+        &__map iframe {
+            height: 250px;
+        }
+        &__title {
+            font-size: 32px;
+            line-height: 40px;
+        }
+        &__form {
+            padding: 25px;
+        }
+        &__form-input {
+            min-width: auto;
+        }
     }
 }

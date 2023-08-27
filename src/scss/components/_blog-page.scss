@@ -256,13 +256,12 @@
             width: 100%;
             height: 450px;
         }
-    }
-
-    .person,
-    .filter-latest,
-    .filter-category,
-    .filter-popular {
-        display: none;
+        .person,
+        .filter-latest,
+        .filter-category,
+        .filter-popular {
+            display: none;
+        }
     }
 }
 

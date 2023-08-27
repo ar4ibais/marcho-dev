@@ -271,6 +271,7 @@
         gap: 45px;
         border-bottom: 1px solid #ececec;
         margin-bottom: 30px;
+        flex-wrap: wrap;
     }
 
     &__item {
@@ -424,5 +425,128 @@
     &__button {
         @extend %accent-btn;
         padding: 12px 40px;
+    }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1250px) {
+    .product-add {
+        &__input + input {
+            margin-left: 0;
+            margin-top: 20px;
+        }
+        &__input {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .product-slide {
+        flex-direction: column-reverse;
+        &__thumbs {
+            display: flex;
+            margin-top: 20px;
+            img + img {
+                margin-top: 0;
+                margin-left: 28px;
+            }
+        }
+        &__big {
+            margin-left: 0;
+        }
+        &__big img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .product-slide {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        &__thumbs {
+            display: block;
+            margin-top: 0;
+            margin-right: 30px;
+            img + img {
+                margin-left: 0;
+                margin-top: 30px;
+            }
+        }
+        &__big {
+            width: 100%;
+        }
+    }
+    .product-one {
+        &__inner {
+            display: block;
+        }
+        &__content {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .product-page {
+        padding-top: 70px;
+    }
+    .product-slide {
+        flex-direction: column-reverse;
+        &__thumbs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin-top: 20px;
+            margin-right: 0;
+            grid-gap: 10px;
+            img + img {
+                margin-top: 0;
+            }
+        }
+        &__big {
+            margin-left: 0;
+        }
+        &__big img {
+            height: 500px;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .product-slide {
+        &__thumbs {
+            grid-template-columns: repeat(2, 1fr);
+            img {
+                width: 100%;
+            }
+        }
+        &__big img {
+            height: 350px;
+        }
+    }
+    .product-one {
+        &__btn {
+            display: block;
+            margin-top: 20px;
+        }
+        &__num-box {
+            width: 190px;
+        }
+        &__num-input {
+            padding: 15px 65px;
+        }
+    }
+    .product-tabs {
+        &__inner {
+            flex-direction: column;
+        }
     }
 }
