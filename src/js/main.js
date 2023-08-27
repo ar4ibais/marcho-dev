@@ -65,6 +65,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('.menu__btn').addEventListener('click', () => {
         document.querySelector('.menu__list').classList.toggle('menu__list--active');
+        if (document.querySelector('.menu__list').classList.contains('menu__list--active')) {
+            document.documentElement.style.overflow = 'hidden';
+        } else {
+            document.documentElement.style.overflow = '';
+        }
     });
 
     if (document.querySelector('.shop__filters-btn')) {
