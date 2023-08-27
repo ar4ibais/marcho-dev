@@ -2,14 +2,21 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         padding: 40px 0;
         align-items: flex-end;
+    }
+    .logo {
+        z-index: 3;
     }
 }
 
 .menu {
     &__list {
         display: flex;
+    }
+    &__btn {
+        display: none;
     }
 
     &__list-item+.menu__list-item {
@@ -62,5 +69,95 @@
 .site-container.page-404 {
     .header {
         background-color: $bg;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 860px) {
+    .menu__list-item + .menu__list-item {
+        margin-left: 0;
+    }
+    .menu {
+        order: 1;
+        margin-left: 30px;
+        &__list {
+            transform: translateY(-200%);
+            position: absolute;
+            top: 140px;
+            width: 100%;
+            left: 0;
+            bottom: -50px;
+            top: 0;
+            z-index: 2;
+            background-color: #fff;
+            flex-direction: column;
+            text-align: center;
+            transition: all .3s;
+            &.menu__list--active {
+                transform: translateY(0);
+            }
+        }
+        &__list-item:first-child {
+            padding-top: 50%;
+        }
+        &__list-item {
+            width: 100%;
+            padding: 0 15px;
+        }
+        &__list-link {
+            display: block;
+            padding: 12px 0;
+        }
+        &__btn {
+            width: 30px;
+            height: 22px;
+            border: none;
+            background-color: transparent;
+            z-index: 3;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+            span {
+                width: 100%;
+                height: 3px;
+                background-color: $title-color;
+            }
+            &::after,
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background-color: $title-color;
+            }
+            &::before {
+                top: 0;
+            }
+            &::after {
+                bottom: 0;
+            }
+        }
+    }
+    .user-nav {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .menu {
+        order: 0;
+    }
+    .user-nav {
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: 35px;
+        padding-right: 10px;
     }
 }

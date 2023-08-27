@@ -8,3 +8,13 @@
         text-align: center; 
     }
 }
+
+
+
+@media (max-width: 500px) {
+    .top {
+        &__container {
+            padding: 100px 0;
+        }
+    }
+}

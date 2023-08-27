@@ -1,35 +1,61 @@
 .modal {
     max-width: 570px;
     margin: 120px auto;
+
     &__links {
         text-align: center;
         margin-bottom: 50px;
-        a + a {
+
+        a+a {
             margin-left: 50px;
         }
     }
+
     &__link {
         @extend %roboto-400;
         font-size: 22px;
         text-transform: uppercase;
         color: #909090;
     }
+
     &__link--active {
         color: $accent-color;
     }
+
     &__label {
         display: block;
         margin-bottom: 30px;
+
+        input[type="checkbox"] {
+            @extend %checkbox-hide;
+
+            &:checked+.modal__checkbox {
+                border-color: $accent-color;
+                background-color: $accent-color;
+                background-image: url(../../img/icons/tick.svg);
+                background-position: center center;
+            }
+        }
     }
+
+    &__checkbox {
+        width: 16px;
+        height: 16px;
+        border: 1px solid $default-color;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
     &__input {
         display: block;
         width: 100%;
-        margin-top: 10px;   
+        margin-top: 10px;
         border: none;
         background-color: $bg;
         height: 60px;
         padding: 0 15px;
     }
+
     &__btn {
         display: block;
         background-color: $title-color;
@@ -41,12 +67,22 @@
         cursor: pointer;
         padding: 14px 0;
     }
+
     &__lost {
         margin-top: 12px;
         color: $accent-color;
         display: inline-block;
     }
+
     &__text {
         margin-bottom: 30px;
+    }
+}
+
+
+
+@media (max-width: 620px) {
+    .modal {
+        margin: 70px auto;
     }
 }
