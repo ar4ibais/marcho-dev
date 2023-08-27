@@ -7,7 +7,7 @@
         align-items: flex-end;
     }
     .logo {
-        z-index: 3;
+        z-index: 10;
     }
 }
 
@@ -92,7 +92,7 @@
             left: 0;
             bottom: -50px;
             top: 0;
-            z-index: 2;
+            z-index: 9;
             background-color: #fff;
             flex-direction: column;
             text-align: center;
@@ -117,7 +117,7 @@
             height: 22px;
             border: none;
             background-color: transparent;
-            z-index: 3;
+            z-index: 10;
             display: flex; 
             justify-content: center;
             align-items: center;
